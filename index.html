@@ -1,14 +1,15 @@
 <!doctype html>
 <html lang="ja" data-theme="technology">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Enjourney｜貸切バス 空き状況</title><link rel="stylesheet" href="./portal.css?v=20261105-compact"><script src="./state.js" defer></script><script src="./portal.js?v=20261105-compact" defer></script></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Enjourney｜貸切バス 空き状況</title><link rel="stylesheet" href="./portal.css?v=20261105-reference"><script src="./state.js" defer></script><script src="./portal.js?v=20261105-reference" defer></script><link rel="stylesheet" href="./fidelity.css?v=20261105-reference"><link rel="preload" href="./portal-sans.woff" as="font" type="font/woff" crossorigin><link rel="preload" href="./portal-serif.woff" as="font" type="font/woff" crossorigin></head>
 <body>
 <a class="skip" href="#main">カレンダーへ移動</a>
+<div class="viewport-frame"><div class="portal-stage"><div class="retro-ornament" aria-hidden="true"></div>
 <header class="header">
   <a class="brand" href="./">Enjourney</a><strong class="retro-title">貸切バス 空き状況</strong>
   <nav aria-label="メニュー"><button type="button" data-view="list">相談・予約</button><button type="button" data-view="profile">マイページ</button></nav>
   <div class="theme-control"><span>デザイン切替</span><div class="segments" role="group" aria-label="デザイン切替"><button type="button" data-theme="nostalgia" aria-pressed="false">ノスタルジー</button><button type="button" data-theme="technology" aria-pressed="true">テクノロジー</button></div></div>
 </header>
-<div class="demo-banner" role="note"><strong>デザイン確認用デモ</strong><span>空き状況は架空のサンプルです。実在庫ではありません・相談は送信されません。</span></div>
+
 <div class="layout">
   <aside class="reception" aria-label="Enjourney 受付">
     <div class="technology-guide"><div class="reception-label">Enjourney 受付</div><h1>ご希望の日程を<br>お選びください。</h1></div>
@@ -16,6 +17,7 @@
   </aside>
   <main id="main" tabindex="-1">
     <section id="calendar-screen" aria-label="空き状況ホーム" class="panel">
+      <p class="mobile-sample-note" role="note">公開デモ · 実在庫ではありません</p>
       <form id="conditions" class="conditions">
         <label>乗車地<select id="boarding" name="boarding" aria-label="乗車地"><option value="">選んでください</option></select></label>
         <label>降車地<select id="alighting" name="alighting" aria-label="降車地"><option value="未定">未定</option></select></label>
@@ -27,7 +29,7 @@
       <div class="selection-row"><div><p id="range-label" class="range-label" aria-live="polite">日程を選んでください</p><button type="button" id="clear" class="text-button">選択を解除</button><p class="waitlist-note">×の日も、キャンセル待ちで相談できます。</p></div><button type="button" id="consult" class="primary">この日程で相談する <span aria-hidden="true">›</span></button></div>
       <p id="calendar-error" class="error" role="alert" hidden></p>
       <div class="calendar-footer"><p>空きは日別の目安です。連続日程は確認してご回答します。</p><p id="availability-status" role="status">空き情報は未接続です。日程を選んで相談内容を確認できます。</p></div>
-      <details class="preview-tools"><summary>この画面の接続状況</summary><p>デザインと操作を共同確認する公開デモです。実際の個人情報・業務情報は入力しないでください。旅行会社のログイン、公開空き情報、相談送信は未接続です。</p><button type="button" id="sample">合成サンプルで操作を試す</button><button type="button" id="unknown">未接続の表示へ戻す</button></details>
+
     </section>
     <section id="consult-screen" class="panel flow-panel" hidden aria-label="相談内容の入力"><p class="eyebrow">1 日程選択　→　<strong>2 内容の入力</strong>　→　3 確認</p><h1 tabindex="-1">相談内容をお聞かせください</h1><p>操作確認用です。架空の情報でお試しください。入力内容は送信されません。</p><div id="consult-summary" class="summary-box"></div>
       <form id="consult-form"><div class="form-grid">
@@ -42,4 +44,6 @@
     <p class="preview-label">デザイン確認用デモ · 実在庫ではありません · 相談は送信されません</p><p id="storage-status" role="status" class="storage-note"></p>
   </main>
 </div>
+</div></div>
+<div class="demo-toolbar"><p role="note"><strong>公開デモ</strong> · サンプルの空き状況です。実在庫ではありません。相談は送信されません。</p><button id="display-mode" type="button" aria-pressed="true">標準サイズで見る</button>      <details class="preview-tools"><summary>接続状況</summary><p>デザインと操作を共同確認する公開デモです。実際の個人情報・業務情報は入力しないでください。旅行会社のログイン、公開空き情報、相談送信は未接続です。</p><button type="button" id="sample">合成サンプルで操作を試す</button><button type="button" id="unknown">未接続の表示へ戻す</button></details></div>
 </body></html>

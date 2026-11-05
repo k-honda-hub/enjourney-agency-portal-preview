@@ -13,12 +13,12 @@ function renderCalendar(focusDate){
  const start=new Date(state.month+'-01T12:00:00Z').getUTCDay();for(let i=0;i<start;i++){const d=document.createElement('div');d.className='empty-day';el.append(d);}
  const today=S.jstToday();S.monthDays(state.month).forEach(date=>{const day=Number(date.slice(-2)),dow=new Date(date+'T12:00:00Z').getUTCDay(),status=currentStatus(date),b=document.createElement('button');b.type='button';b.dataset.date=date;b.className='day w'+dow;const selected=state.range.start===date||state.range.end&&date>=state.range.start&&date<=state.range.end;if(selected)b.classList.add('selected');if(state.range.start===date)b.classList.add('range-start');if(state.range.end===date)b.classList.add('range-end');b.setAttribute('aria-pressed',String(!!selected));b.setAttribute('aria-label',S.pretty(date)+'（'+weekdays[dow]+'） '+labels[status][1]+(state.range.start===date?' 開始日':'')+(state.range.end===date?' 終了日':''));if(date===today)b.setAttribute('aria-current','date');const n=document.createElement('span');n.className='day-number';n.textContent=day;const symbol=document.createElement('span');symbol.className='symbol '+status;symbol.textContent=labels[status][0];symbol.setAttribute('aria-hidden','true');b.append(n,symbol);el.append(b);});
  while((el.children.length-7)%7){const d=document.createElement('div');d.className='empty-day';el.append(d);}
- $('#range-label').textContent=S.compactRangeLabel(state.range);$('#clear').disabled=!state.range.start;
- $('#availability-status').textContent=state.mode==='sample'?'合成サンプル・実在庫ではありません（2026年11月の検査例）。':state.mode==='loading'?'確認用サンプルを読み込んでいます。':'空き情報は未接続です。日程を選んで相談内容を確認できます。';
+ $('#range-label').textContent=S.compactRangeLabel(state.range);$('#range-label').classList.toggle('long-range',$('#range-label').textContent.length>20);$('#clear').disabled=!state.range.start;$('#calendar').style.setProperty('--weeks',String((el.children.length-7)/7));document.documentElement.dataset.availability=state.mode;
+ $('#availability-status').textContent=state.mode==='sample'?'サンプル表示 · 実在庫ではありません':state.mode==='loading'?'確認用サンプルを読み込んでいます。':'空き情報は未接続です。日程を選んで相談内容を確認できます。';
  if(focusDate)el.querySelector('[data-date="'+focusDate+'"]')?.focus();
 }
 function invalidate(){state.revision++;state.snapshot=null;state.mode='unconnected';sampleGeneration++;renderCalendar();}
-function show(view){state.view=view;for(const x of ['calendar','consult','confirm','other'])$('#'+x+'-screen').hidden=x!==view;if(view==='calendar')$('#main').focus();else $('#'+view+'-screen h1').focus();window.scrollTo({top:0,behavior:'instant'});}
+function show(view){state.view=view;document.documentElement.dataset.view=view;for(const x of ['calendar','consult','confirm','other'])$('#'+x+'-screen').hidden=x!==view;if(view==='calendar')$('#main').focus();else $('#'+view+'-screen h1').focus();fitComposition();window.scrollTo({top:0,behavior:'instant'});}
 function summary(target){const box=$(target);box.replaceChildren();const lines=[S.rangeLabel(state.range),(state.boarding||'未定')+' → '+state.alighting,state.vehicleType+'・'+state.vehicleCount+'台','行程・時刻の確認が必要'];for(const text of lines){const p=document.createElement('p');p.textContent=text;box.append(p);}}
 function error(selector,text){const p=$(selector);p.textContent=text;p.hidden=!text;}
 function syncDraft(){for(const field of $('#consult-form').elements)if(field.name)state.draft[field.name]=field.value;}
@@ -47,3 +47,27 @@ try{applyTheme(localStorage.getItem('enjourney.agency.preview.theme.v1'),false);
 renderCalendar();
 loadSample();
 (async()=>{const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),8000);try{const response=await fetch('./context.json',{signal:controller.signal});if(!response.ok)throw Error('context');const data=await response.json();if(data.mode!=='UNCONNECTED_PREVIEW')throw Error('context');const select=$('#vehicleType');for(const type of data.vehicleTypes)select.add(new Option(type,type));select.value=state.vehicleType;}catch{$('#storage-status').textContent='車種マスターへの接続を確認できません。車種は「相談したい」として進められます。';state.vehicleType='相談したい';$('#vehicleType').value=state.vehicleType;}finally{clearTimeout(timer);}})();
+
+// One scale for the entire approved 1536 × 1024 desktop composition.
+// Mobile and input/confirmation screens retain normal document flow.
+let fitEnabled=true;
+function fitComposition(){
+ const desktop=window.innerWidth>=1000;
+ const canvas=desktop&&state.view==='calendar';
+ document.documentElement.classList.toggle('desktop-canvas',canvas);
+ document.documentElement.classList.toggle('fit-canvas',canvas&&fitEnabled);
+ const toolbar=document.querySelector('.demo-toolbar');
+ const scale=canvas&&fitEnabled?Math.min(1,document.documentElement.clientWidth/1536,(window.innerHeight-toolbar.offsetHeight)/1024):1;
+ document.documentElement.style.setProperty('--stage-scale',String(Math.max(.25,scale)));
+ const frame=document.querySelector('.viewport-frame');
+ frame.style.width=canvas?1536*scale+'px':'';
+ frame.style.height=canvas?1024*scale+'px':'';
+ const toggle=document.querySelector('#display-mode');
+ toggle.hidden=!canvas;
+ toggle.textContent=fitEnabled?'標準サイズで見る':'全体を画面に収める';
+ toggle.setAttribute('aria-pressed',String(fitEnabled));
+}
+document.querySelector('#display-mode').addEventListener('click',()=>{fitEnabled=!fitEnabled;fitComposition();});
+window.addEventListener('resize',fitComposition);
+document.documentElement.dataset.view='calendar';
+fitComposition();
