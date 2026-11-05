@@ -1,0 +1,200 @@
+{
+  "schema": "enjourney.ui-acceptance-fixture.v1",
+  "sample": true,
+  "externalSubmission": false,
+  "timezone": "Asia/Tokyo",
+  "year": 2026,
+  "month": 11,
+  "weekStartsOn": "sunday",
+  "weekdayLabels": [
+    "日",
+    "月",
+    "火",
+    "水",
+    "木",
+    "金",
+    "土"
+  ],
+  "route": {
+    "boardingLabel": "岐阜県",
+    "alightingLabel": "成田空港（千葉県）",
+    "vehicleTypeLabel": "大型バス",
+    "vehicleCount": 1
+  },
+  "selectedRange": {
+    "startDate": "2026-11-07",
+    "endDate": "2026-11-10",
+    "inclusiveDays": 4
+  },
+  "days": [
+    {
+      "date": "2026-11-01",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-02",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-03",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-04",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-05",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-06",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-07",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-08",
+      "status": "waitlist_inquiry"
+    },
+    {
+      "date": "2026-11-09",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-10",
+      "status": "limited"
+    },
+    {
+      "date": "2026-11-11",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-12",
+      "status": "waitlist_inquiry"
+    },
+    {
+      "date": "2026-11-13",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-14",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-15",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-16",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-17",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-18",
+      "status": "limited"
+    },
+    {
+      "date": "2026-11-19",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-20",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-21",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-22",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-23",
+      "status": "limited"
+    },
+    {
+      "date": "2026-11-24",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-25",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-26",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-27",
+      "status": "waitlist_inquiry"
+    },
+    {
+      "date": "2026-11-28",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-29",
+      "status": "available"
+    },
+    {
+      "date": "2026-11-30",
+      "status": "available"
+    }
+  ],
+  "expectedGrid": [
+    [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    [
+      29,
+      30,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "defaultTheme": "technology",
+  "productionMeaning": "UI検査用の合成データ。実在庫・実受付ではない。日別状態は期間確保を保証しない。"
+}

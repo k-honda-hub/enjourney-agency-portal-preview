@@ -1,0 +1,22 @@
+{
+  "mode": "UNCONNECTED_PREVIEW",
+  "agencyAuthenticated": false,
+  "capabilities": {
+    "availability": false,
+    "consultations": false,
+    "profileTheme": false,
+    "attachments": false
+  },
+  "vehicleTypes": [
+    "大型バス",
+    "中型バス",
+    "小型バス",
+    "マイクロバス"
+  ],
+  "links": {
+    "login": null,
+    "consultations": null,
+    "profile": null
+  },
+  "defaultTheme": "technology"
+}

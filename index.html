@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja" data-theme="technology">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Enjourney｜貸切バス 空き状況</title><link rel="stylesheet" href="./portal.css"><script src="./state.js" defer></script><script src="./portal.js" defer></script></head>
+<body>
+<a class="skip" href="#main">カレンダーへ移動</a>
+<header class="header">
+  <a class="brand" href="./">Enjourney</a><strong class="retro-title">貸切バス 空き状況</strong>
+  <nav aria-label="メニュー"><button type="button" data-view="list">相談・予約</button><button type="button" data-view="profile">マイページ</button></nav>
+  <div class="theme-control"><span>デザイン切替</span><div class="segments" role="group" aria-label="デザイン切替"><button type="button" data-theme="nostalgia" aria-pressed="false">ノスタルジー</button><button type="button" data-theme="technology" aria-pressed="true">テクノロジー</button></div></div>
+</header>
+<div class="layout">
+  <aside class="reception" aria-label="Enjourney 受付">
+    <div class="technology-guide"><div class="reception-label">Enjourney 受付</div><h1>ご希望の日程を<br>お選びください。</h1></div>
+    <div class="nostalgia-guide"><h2>今日のことば</h2><p id="today"></p><p class="proverb">よい旅は、<br>よい準備から。</p><div class="retro-art" aria-hidden="true"></div></div>
+  </aside>
+  <main id="main" tabindex="-1">
+    <section id="calendar-screen" aria-label="空き状況ホーム" class="panel">
+      <form id="conditions" class="conditions">
+        <label>乗車地<select id="boarding" name="boarding" aria-label="乗車地"><option value="">選んでください</option></select></label>
+        <label>降車地<select id="alighting" name="alighting" aria-label="降車地"><option value="未定">未定</option></select></label>
+        <div class="vehicle-fields"><label><span>車種</span><select id="vehicleType" name="vehicleType"><option value="相談したい">相談したい</option></select></label><label><span>必要台数</span><input id="vehicleCount" name="vehicleCount" type="number" required min="1" max="99" step="1" value="1" inputmode="numeric"><span>台</span></label></div>
+      </form>
+      <div class="month-heading"><span id="retro-month" aria-hidden="true"></span><h2 id="month-title"></h2><div class="month-buttons"><button id="prev" type="button" aria-label="前の月">‹</button><button id="next" type="button" aria-label="次の月">›</button></div></div>
+      <div class="calendar-intro"><p>最初の日、最後の日の順に選んでください。</p><div class="legend"><span><b class="available">○</b> 空きあり</span><span><b class="limited">△</b> 残りわずか</span><span><b class="waitlist_inquiry">×</b> キャンセル待ちで相談</span><span class="unknown-legend">— 確認中</span></div></div>
+      <div id="calendar" class="calendar" role="group" aria-labelledby="month-title"></div>
+      <div class="selection-row"><div><p id="range-label" class="range-label" aria-live="polite">日程を選んでください</p><button type="button" id="clear" class="text-button">選択を解除</button><p class="waitlist-note">×の日も、キャンセル待ちで相談できます。</p></div><button type="button" id="consult" class="primary">この日程で相談する <span aria-hidden="true">›</span></button></div>
+      <p id="calendar-error" class="error" role="alert" hidden></p>
+      <div class="calendar-footer"><p>空きは日別の目安です。連続日程は確認してご回答します。</p><p id="availability-status" role="status">空き情報は未接続です。日程を選んで相談内容を確認できます。</p></div>
+      <details class="preview-tools"><summary>この画面の接続状況</summary><p>デザインと操作を共同確認する公開デモです。実際の個人情報・業務情報は入力しないでください。旅行会社のログイン、公開空き情報、相談送信は未接続です。</p><button type="button" id="sample">合成サンプルで操作を試す</button><button type="button" id="unknown">未接続の表示へ戻す</button></details>
+    </section>
+    <section id="consult-screen" class="panel flow-panel" hidden aria-label="相談内容の入力"><p class="eyebrow">1 日程選択　→　<strong>2 内容の入力</strong>　→　3 確認</p><h1 tabindex="-1">相談内容をお聞かせください</h1><p>操作確認用です。架空の情報でお試しください。入力内容は送信されません。</p><div id="consult-summary" class="summary-box"></div>
+      <form id="consult-form"><div class="form-grid">
+        <label>乗車場所の詳細（任意）<input name="boardingDetail" maxlength="200" autocomplete="off"></label><label>降車場所の詳細（任意）<input name="alightingDetail" maxlength="200" autocomplete="off"></label>
+        <label>最初の乗車時刻（未定は空欄）<input name="startTime" type="time"></label><label>最後の降車時刻（未定は空欄）<input name="endTime" type="time"></label>
+        <label>人数（任意）<input name="passengers" type="number" min="1" max="9999" step="1" inputmode="numeric"></label><label>返信先メール（任意）<input name="email" type="email" maxlength="254" autocomplete="email"></label>
+        <label>会社名（任意）<input name="company" maxlength="120" autocomplete="organization"></label><label>担当者名（任意）<input name="contact" maxlength="100" autocomplete="name"></label>
+      </div><label>立寄り先・日別行程（任意）<textarea name="itinerary" rows="3" maxlength="4000"></textarea></label><label>荷物・設備・その他のご希望（任意）<textarea name="notes" rows="2" maxlength="2000"></textarea></label><p class="connection-note">行程表の添付は未接続です。必要事項は上の欄に入力できます。</p><p id="form-error" role="alert" class="error" hidden></p><div class="actions"><button type="button" id="back-calendar">日程の選択に戻る</button><button type="submit" class="primary">相談内容を確認する <span aria-hidden="true">›</span></button></div></form>
+    </section>
+    <section id="confirm-screen" class="panel flow-panel" hidden aria-label="相談内容の確認"><p class="eyebrow">1 日程選択　→　2 内容の入力　→　<strong>3 確認</strong></p><h1 tabindex="-1">相談内容をご確認ください</h1><div id="confirm-summary" class="summary-box"></div><p id="range-warning" class="connection-note"></p><h2>相談文</h2><pre id="message-preview"></pre><p class="connection-note">相談は車両の確保・予約確定ではありません。行程・時刻・乗務員を含めて担当者が確認します。</p><p id="send-status" role="status">相談送信は未接続です。内容はこの画面に保持されますが、Enjourneyにはまだ届いていません。</p><div class="actions"><button type="button" id="back-form">内容を修正する</button><button type="button" class="primary" id="send" disabled>この内容で相談を送る</button></div></section>
+    <section id="other-screen" class="panel flow-panel" hidden><h1 id="other-title" tabindex="-1"></h1><p id="other-message"></p><button type="button" id="back-home">日程の選択へ戻る</button></section>
+    <p class="preview-label">デザイン確認用デモ · 実在庫ではありません · 相談は送信されません</p><p id="storage-status" role="status" class="storage-note"></p>
+  </main>
+</div>
+</body></html>
