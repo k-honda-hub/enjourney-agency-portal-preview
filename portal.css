@@ -5,3 +5,100 @@ html[data-theme=nostalgia]{--ink:#16170f;--navy:#b10000;--line:#4a3826;--accent:
 @media(max-width:900px){.header{flex-wrap:wrap;gap:10px 18px;padding:12px 18px}.theme-control{width:100%;justify-content:flex-end}.brand{margin-right:auto}.layout{grid-template-columns:1fr}.reception{background-size:260px auto;background-repeat:no-repeat;background-position:right 42%;min-height:150px;background-color:#edece8}.technology-guide{padding:20px 24px}.technology-guide h1{font-size:26px;margin:12px 0}.technology-guide h1 br{display:none}.reception-label{font-size:20px}main{padding:12px}.panel{border-radius:18px}.conditions>label{font-size:18px}.month-heading h2{font-size:40px}.selection-row{grid-template-columns:1fr}.primary{min-height:58px}.calendar-footer{display:block}html[data-theme=nostalgia] .header{margin:62px 10px 0;padding:8px 12px;background:#b81b0d}html[data-theme=nostalgia] .retro-title{font-size:26px;width:100%;order:2;text-align:center}html[data-theme=nostalgia] .header nav button{font-size:18px;padding:5px 12px}html[data-theme=nostalgia] .theme-control{width:auto;top:-58px;right:0}html[data-theme=nostalgia] .layout{grid-template-columns:1fr;padding:10px;gap:10px}html[data-theme=nostalgia] .reception{margin:0;min-height:0;border-width:4px}html[data-theme=nostalgia] .nostalgia-guide{display:grid;grid-template-columns:auto 1fr;padding:4px 10px;border:0;gap:2px 12px}html[data-theme=nostalgia] .nostalgia-guide h2{font-size:22px;margin:4px;padding:4px 12px}html[data-theme=nostalgia] #today{font-size:20px;border:0;padding:0;margin:0;width:auto}html[data-theme=nostalgia] .proverb{writing-mode:horizontal-tb;font-size:24px;margin:4px;letter-spacing:0;grid-column:1/-1;text-align:center}html[data-theme=nostalgia] .proverb br{display:none}html[data-theme=nostalgia] .retro-art{display:none}html[data-theme=nostalgia] .panel{padding:8px 0;border-left:0}html[data-theme=nostalgia] #retro-month{font-size:66px}html[data-theme=nostalgia] .month-heading h2{font-size:32px}}
 @media(max-width:520px){.header{padding:10px 12px;gap:8px}.brand{font-size:30px}.header nav button{font-size:16px;padding:4px 10px;min-height:44px}.theme-control{justify-content:space-between;font-size:16px;gap:6px}.segments button{font-size:16px;padding:5px 9px;min-height:44px}.reception{min-height:112px;background-size:175px auto;background-position:right 40%}.technology-guide{padding:12px 14px;width:74%}.technology-guide h1{font-size:23px;margin:10px 0}.technology-guide h1 br{display:block}.reception-label{font-size:18px;padding-left:8px;border-width:3px}main{padding:8px}.panel{padding:14px 10px;border-width:1px;border-radius:14px}.conditions{gap:10px;margin-bottom:16px;display:grid;grid-template-columns:1fr 1fr}.conditions>label{display:block;font-size:18px}.conditions select{display:block;width:100%;padding:6px;font-size:18px;margin-top:4px}.vehicle-fields{grid-column:1/-1;gap:12px;display:grid;grid-template-columns:1fr 1fr}.vehicle-fields label{display:flex;flex-wrap:wrap;font-size:16px;gap:4px}.vehicle-fields label>span:first-child{width:100%}.vehicle-fields select{width:100%;font-size:18px;margin:0}.vehicle-fields input{width:75%;font-size:18px}.month-heading{justify-content:space-between;gap:10px}.month-heading h2{font-size:32px;letter-spacing:-1px;margin:0}.month-buttons{gap:6px}.month-buttons button{width:44px;height:48px;font-size:30px}.calendar-intro{padding-top:10px}.calendar-intro p{font-size:18px;line-height:1.55}.legend{font-size:16px;gap:2px 12px;margin-top:6px}.legend b{font-size:26px}.calendar{margin-bottom:14px}.weekday{font-size:22px;padding:6px 0}.day,.empty-day{height:70px;min-height:70px}.day-number{font-size:19px;left:5px;top:3px}.symbol{font-size:40px;padding-top:23px}.selection-row{padding-top:12px;gap:14px}.range-label{font-size:23px}.waitlist-note{font-size:18px}.primary{font-size:22px;padding:12px 10px;gap:10px;width:100%}.calendar-footer p{font-size:18px}.preview-label{font-size:14px;text-align:center}.flow-panel h1{font-size:27px}.eyebrow{font-size:16px}.form-grid{grid-template-columns:1fr;gap:0}.actions{flex-direction:column-reverse;align-items:stretch;gap:12px}.actions .primary{font-size:21px}.flow-panel pre{padding:12px}.summary-box{padding:12px}.flow-panel label{font-size:18px}.preview-tools button{width:100%;margin-right:0}html[data-theme=nostalgia] .brand{font-size:29px}html[data-theme=nostalgia] .header{gap:8px;padding:6px}html[data-theme=nostalgia] .header nav button{font-size:16px;padding:4px 8px}html[data-theme=nostalgia] .theme-control{font-size:16px;width:100%;right:0;top:-58px}html[data-theme=nostalgia] .segments{border-width:2px}html[data-theme=nostalgia] .retro-title{font-size:24px;padding:3px 6px}html[data-theme=nostalgia] .nostalgia-guide{gap:3px;padding:4px}html[data-theme=nostalgia] .nostalgia-guide h2{font-size:19px;padding:5px 8px}html[data-theme=nostalgia] #today{font-size:18px}html[data-theme=nostalgia] .proverb{font-size:23px}html[data-theme=nostalgia] .month-heading{gap:6px}html[data-theme=nostalgia] #retro-month{font-size:52px;letter-spacing:-4px}html[data-theme=nostalgia] .month-heading h2{font-size:25px;letter-spacing:-1px}html[data-theme=nostalgia] .weekday{font-size:25px}html[data-theme=nostalgia] .day{height:70px}html[data-theme=nostalgia] .day-number{font-size:21px;left:4px}html[data-theme=nostalgia] .symbol{font-size:42px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* Public preview: readable at normal browser zoom, without scaling the page. */
+.demo-banner{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:4px 12px;padding:6px 16px;background:#fff2ce;color:#684600;font:13px/1.45 'Yu Gothic UI','Meiryo',sans-serif;border-bottom:1px solid #e4d3a3}
+@media(min-width:901px){
+:root{font-size:15px}
+button,input,select{min-height:36px}
+button{padding:6px 12px}
+.header{min-height:58px;padding:8px 3%;gap:20px}
+.brand{font-size:30px;letter-spacing:-1px}
+.header nav button{font-size:16px;padding:4px 16px}
+.theme-control{font-size:14px;gap:12px}
+.segments button{font-size:15px;padding:5px 14px}
+.layout{grid-template-columns:24% 76%;min-height:calc(100vh - 90px)}
+.technology-guide{padding:32px 16px 0 10%}
+.reception-label{font-size:19px;padding-left:10px;border-width:3px}
+.technology-guide h1{font-size:28px;margin:14px 0}
+main{padding:12px 14px 8px 8px}
+.panel{padding:16px 20px 12px;border-radius:20px}
+.conditions{gap:12px;margin-bottom:10px}
+.conditions>label{font-size:16px;gap:10px}
+.conditions select{padding:4px 8px}
+.vehicle-fields{width:auto;border-left:1px solid #657084;padding-left:12px;gap:6px}
+.vehicle-fields label{font-size:14px}
+.vehicle-fields label>span:first-child{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}
+.vehicle-fields select{width:112px;font-size:14px}
+.vehicle-fields input{width:48px}
+.month-heading{gap:18px}
+.month-heading h2{font-size:40px;letter-spacing:-1px;margin:0 0 6px}
+.month-buttons{gap:8px}
+.month-buttons button{font-size:26px;width:36px;height:36px}
+.calendar-intro{padding-bottom:7px;gap:3px 12px}
+.calendar-intro p{font-size:15px}
+.legend{font-size:13px;gap:4px 12px}
+.legend b{font-size:22px}
+.calendar{margin-bottom:12px}
+.weekday{font-size:20px;padding:4px 0}
+.day,.empty-day{height:clamp(44px,6.2vh,56px);min-height:44px}
+.day-number{font-size:18px;left:8px;top:2px}
+.symbol{font-size:40px;padding-top:13px}
+.selection-row{gap:16px;padding-top:10px}
+.range-label{font-size:21px}
+.text-button{font-size:14px;min-height:24px}
+.waitlist-note{font-size:13px}
+.primary{font-size:20px;min-height:48px;padding:8px 16px;gap:12px;border-radius:9px}
+.primary span{font-size:28px}
+.calendar-footer{margin-top:12px;padding-top:7px;gap:3px 12px}
+.calendar-footer p{font-size:13px}
+.preview-tools{font-size:13px;margin-top:8px;padding-top:7px}
+.preview-tools button{font-size:14px}
+.preview-label,.storage-note{font-size:12px;margin-top:5px}
+.flow-panel h1{font-size:26px}.flow-panel h2{font-size:20px}
+.eyebrow{font-size:14px}.summary-box{padding:12px 16px;margin:16px 0}
+.flow-panel label{margin-bottom:12px}.form-grid{gap:12px}
+.flow-panel input,.flow-panel textarea{padding:7px}
+.flow-panel pre{font-size:15px;line-height:1.6;padding:12px}
+.actions{margin-top:16px}.actions .primary{font-size:18px;min-height:44px}
+html[data-theme=nostalgia] .header{margin:42px 12px 0;min-height:64px;padding:4px 18px;border-width:6px;gap:16px}
+html[data-theme=nostalgia] .brand{font-size:34px}
+html[data-theme=nostalgia] .retro-title{font-size:27px;border-width:3px;padding:0 12px}
+html[data-theme=nostalgia] .header nav button{font-size:16px}
+html[data-theme=nostalgia] .theme-control{top:-41px}
+html[data-theme=nostalgia] .layout{grid-template-columns:20% minmax(0,1fr);min-height:calc(100vh - 138px);padding:8px 12px;gap:10px}
+html[data-theme=nostalgia] .reception{border-width:6px;margin-bottom:22px}
+html[data-theme=nostalgia] .nostalgia-guide{padding:8px;border-width:3px}
+html[data-theme=nostalgia] .nostalgia-guide h2{font-size:21px;padding:6px;margin:4px 0 10px}
+html[data-theme=nostalgia] #today{font-size:20px;padding-bottom:8px}
+html[data-theme=nostalgia] .proverb{font-size:30px;letter-spacing:3px;margin:12px auto}
+html[data-theme=nostalgia] .panel{padding:0 10px 8px 16px}
+html[data-theme=nostalgia] #retro-month{font-size:64px;letter-spacing:-4px}
+html[data-theme=nostalgia] .month-heading h2{font-size:30px}
+html[data-theme=nostalgia] .calendar-intro{border-width:4px;margin-bottom:5px}
+html[data-theme=nostalgia] .weekday{font-size:22px}
+html[data-theme=nostalgia] .day{height:clamp(44px,6.2vh,56px)}
+html[data-theme=nostalgia] .day-number{font-size:20px}
+html[data-theme=nostalgia] .symbol{font-size:42px}
+}
+@media(max-width:520px){
+:root{font-size:16px}
+.demo-banner{font-size:12px;gap:2px;padding:6px 12px;justify-content:flex-start}
+.header{padding:8px 12px}.brand{font-size:26px}
+.header nav button,.segments button{font-size:14px}
+.reception{min-height:96px;background-size:150px auto}
+.technology-guide{padding:10px 12px}.technology-guide h1{font-size:20px;margin:8px 0}.reception-label{font-size:16px}
+.conditions{margin-bottom:10px}.conditions>label,.conditions select,.vehicle-fields select,.vehicle-fields input{font-size:16px}
+.month-heading h2{font-size:28px}
+.calendar-intro p,.waitlist-note,.calendar-footer p{font-size:15px}
+.legend{font-size:13px;gap:2px 8px}.legend b{font-size:22px}
+.weekday{font-size:18px}
+.day,.empty-day,html[data-theme=nostalgia] .day{height:56px;min-height:56px}
+.day-number{font-size:16px}.symbol{font-size:32px;padding-top:18px}
+.primary{font-size:18px;min-height:48px}.range-label{font-size:20px}
+.preview-tools{font-size:14px}.preview-label{font-size:12px}
+html[data-theme=nostalgia] .day-number{font-size:17px}
+html[data-theme=nostalgia] .symbol{font-size:34px}
+}
+
+@media(min-width:901px){.preview-label{display:none}.storage-note:empty{display:none}.selection-row{padding-top:7px}.range-label{font-size:20px}.text-button{min-height:22px;line-height:1.3}.calendar-footer{margin-top:8px}.symbol{font-size:34px;padding-top:12px}html[data-theme=nostalgia] .header{margin-top:34px;min-height:56px}html[data-theme=nostalgia] .brand{font-size:29px}html[data-theme=nostalgia] .retro-title{font-size:24px}html[data-theme=nostalgia] .theme-control{top:-35px}html[data-theme=nostalgia] .segments button{min-height:28px;padding-top:3px;padding-bottom:3px}html[data-theme=nostalgia] #retro-month{font-size:48px}html[data-theme=nostalgia] .symbol{font-size:36px}html[data-theme=nostalgia] .weekday{padding:2px 0}.layout{min-height:calc(100vh - 90px)}html[data-theme=nostalgia] .layout{min-height:calc(100vh - 130px)}}
